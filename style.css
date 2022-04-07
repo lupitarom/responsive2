@@ -1,0 +1,298 @@
+:root {
+/*colores primarios para declarar*/
+    --clr-primary-200: #9c21c2;
+    --clr-primary-400: #050931;
+/*colores neutrales para declarar*/
+    --clr-neutral-100: rgb(150, 51, 207);
+    --clr-neutral-900: #ffffff;
+/*tipos de letras a utlizar posteriormente*/
+    --ff-primary: "Inter-ExtraBold";
+    --ff-primary-2: "Inter-Bold";
+    --ff-accent: "Inter-Regular";
+    --ff-accent2: "Inter-SemiBold";
+}
+/*fuentes online*/
+@font-face {
+    font-family: "Inter-Regular";
+    src: url("fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter-SemiBold";
+    src: url("fonts/Inter-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("fonts/Inter-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Inter-ExtraBold";
+    src: url("fonts/Inter-ExtraBold.ttf");
+}
+
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+
+/*pantalla*/
+@media only screen and (min-width: 320px) and (max-width: 479px){
+
+
+#sized_box {
+    height: 30px;
+    background-color: white;
+}
+    
+/*etiquetas*/
+    body {
+        background-color: white;
+        padding: auto;
+    }
+    header {
+        width: 100%;
+        padding: 5%;
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    p {
+        margin: 0;
+    }
+/*navs*/
+    .nav-container__logo {
+        color: var(--clr-primary-200);
+        font-family: var(--ff-primary-2);
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .nav-container__list {
+        display: none;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+/*imagen*/
+    .hero {
+        margin: auto;
+        height: 290px;
+        width: 80%;
+        background-image: url("images/guy.png");
+        background-size: cover;
+        border-radius: 10px;
+        
+    }
+    .hero__image {
+        display: none;
+    }
+
+/*el cart de la parte de abajo*/
+    .review-card {
+        background-color: beige;
+        display: flex;
+        border: 1px solid rgb(231, 222, 222);;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 40px;
+        padding-block: 15px;
+        box-shadow: 0px 4px 4px rgb(168, 166, 166);
+        letter-spacing: 1px;
+    }
+    .review-card__stars {
+        display: flex;
+    }
+    .review-card__image {
+        border-radius: 100px;
+        width: 60px;
+        height: 60px;
+    }
+    .review-card__img {
+        width: 80px;
+        height: 10px;
+    }
+    .review-card__p {
+        font-size: 11px;
+        font-family: var(--ff-accent);
+        color: var(--clr-neutral-100);
+        padding: 2px;
+    }
+    .review-card__text {
+        font-size: 11px;
+        font-family: var(--ff-accent);
+        color: var(--clr-neutral-100);
+        padding: 2px;
+    }
+    .review-card_text-review {
+        padding-left: 15px;
+    }
+    
+
+/*parte del banner*/
+
+    .tittle {
+        padding-top: 35px;
+        text-align: center;
+        margin-bottom: 15px;
+        color: var(--clr-primary-400);
+        font-family: var(--ff-primary);
+        font-size: 30px;
+    }
+    .button {
+        background-color: rgb(195, 0, 255);
+        width: 80%;
+        height: 40px;
+        border-radius: 5px;
+    }
+    .button__reference {
+        color: var(--clr-neutral-900);
+        font-family: var(--ff-accent2);
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .subtitle__text {
+        text-align: center;
+        font-family: var(--ff-accent);
+        color: var(--clr-neutral-100);
+        margin-bottom: 35px;
+    }
+}
+
+/*ajuste de pantalla de una pc*/
+@media only screen and (min-width: 1200px){
+    body {
+            background-color: white;
+            padding: auto;
+    }
+    
+    #sized_box {
+        display: none;
+    }
+    header {
+        position: relative;
+        width: 100%;
+        padding-top: 3%;
+        padding-inline: 8%;
+    }
+    body,
+    h1,
+    h2,
+    h3,
+    p {
+        margin: 0;
+    }
+
+/*navs de la parte del logo*/
+    .nav-container__logo {
+        color: var(--clr-primary-200);
+        font-family: var(--ff-primary-2);
+        font-size: 40px;
+    }
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav-container__hamburguer {
+        display: none;
+    }
+    .nav-container__list {
+        display: flex;
+        flex-direction: row;
+        color: var(--clr-neutral-100);
+        font-family: var(--ff-accent2);
+        list-style: none;
+    }
+    li {
+        padding-right: 40px; 
+    }
+    .hero {
+        width: 100%;
+        height: 500px;
+    }
+    .review-card {
+        background-color: beige;
+        border: 1px solid rgb(231, 222, 222);;
+        border-radius: 10px;
+        padding-left: 10px;
+        padding-right: 40px;
+        padding-block: 15px;
+        box-shadow: 0px 4px 4px rgb(168, 166, 166);
+        width: 25%;
+        position: absolute;
+        display: flex;
+        top: 570px;
+        right: 300px;
+    }
+    .hero__image {
+        width: 100%;
+        height: 100%;
+        
+    }
+    .review-card_text-review {
+        padding-left: 15px;
+    }
+    .review-card__stars {
+        display: flex;
+    }
+    .review-card__img {
+        width: 80px;
+        height: 10px;
+    }
+    .review-card__image {
+        height: 50px;
+        width: 50px;
+        border-radius: 100px;
+    }
+    .review-card__text {
+        font-size: 11px;
+        font-family: var(--ff-accent);
+        color: var(--clr-neutral-100);
+        padding: 2px;
+    }
+    .review-card__p {
+        font-size: 11px;
+        font-family: var(--ff-accent);
+        color: var(--clr-neutral-100);
+        padding: 2px;
+    }
+    .tittle {
+        color: var(--clr-primary-400);
+        font-family: var(--ff-primary);
+        font-size: 36px;
+        position: absolute;
+        top: 300px;
+        width: 41%;
+    }
+    .subtitle {
+        position: absolute;
+        top: 400px;
+        width: 28%;
+    }
+    .button {
+        position: absolute;
+        top: 520px;
+        background-color: rgb(212, 0, 255);
+        width: 15%;
+        height: 40px;
+        border-radius: 5px;
+    }
+    .button__reference {
+        color: var(--clr-neutral-900);
+        font-family: var(--ff-accent2);
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .subtitle__text {
+        font-family: var(--ff-accent);
+        color: var(--clr-neutral-100);
+        margin-bottom: 35px;
+    }
+}
